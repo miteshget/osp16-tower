@@ -1,6 +1,8 @@
 ---
 - name: Play to test connectivity
   hosts: workstation
+  environment:
+    OS_CLIENT_CONFIG_FILE: ./clouds.yaml
 
   tasks:
     - debug:
