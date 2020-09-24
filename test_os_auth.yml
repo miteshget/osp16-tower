@@ -6,7 +6,7 @@
     - debug:
 
         msg: |
-          "{{ lookup('env','OS_AUTH_URL')}}"
+          "{{ lookup('env','OS_CLIENT_CONFIG_FILE')}}"
 
 #    OS_USERNAME: "{{ osp_auth_username }}"
 #    OS_PASSWORD: "{{ osp_auth_password }}"
