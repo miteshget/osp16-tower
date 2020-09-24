@@ -1,0 +1,9 @@
+---
+- name: Play to test connectivity
+  hosts: workstation
+  tasks:
+    - name: Check connectivity
+      os_auth:
+      register: os_auth_output
+
+    - debug: var=os_auth_output
