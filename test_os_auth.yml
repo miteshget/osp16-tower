@@ -1,7 +1,10 @@
 ---
 - name: Play to test connectivity
   hosts: workstation
+
   tasks:
+    - debug:
+        msg: "{{ lookup('env', 'OS_CLOUD')"
     - name: Check connectivity
       os_auth:
       register: os_auth_output
