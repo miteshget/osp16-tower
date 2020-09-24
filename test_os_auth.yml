@@ -10,6 +10,18 @@
         msg: |
           "{{ lookup('env','OS_CLIENT_CONFIG_FILE')}}"
 
+    - name: Create openstack directory
+      become: true
+      file:
+        path: /etc/openstack
+        state: directory
+
+    - name: Copy clouds.yaml
+      become: true
+      copy:
+        src: clouds.yaml
+        dest: /etc/openstack
+
 #    OS_USERNAME: "{{ osp_auth_username }}"
 #    OS_PASSWORD: "{{ osp_auth_password }}"
 #    OS_PROJECT_NAME: "admin"
